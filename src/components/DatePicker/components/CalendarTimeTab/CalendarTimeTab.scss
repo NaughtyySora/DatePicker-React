@@ -1,0 +1,55 @@
+.CalendarTimeTab {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+
+  &-input {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--orange_1);
+    padding-bottom: 0.5rem;
+    font-size: var(--fSize32);
+    outline: none;
+    color: var(--white_1);
+
+    &:last-of-type {
+      margin-right: 1rem;
+    }
+
+    &::placeholder {
+      color: var(--gray_2);
+    }
+  }
+
+  &-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--fSize24);
+    color: var(--white_1);
+    cursor: pointer;
+    transition: transform .25s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    &.active {
+      color: var(--orange_1);
+    }
+
+    &:first-of-type {
+      margin-right: 0.65rem;
+    }
+  }
+
+  &-delimiter {
+    font-size: var(--fSize32);
+    color: var(--white_1);
+    margin: 0 0.5rem;
+  }
+}

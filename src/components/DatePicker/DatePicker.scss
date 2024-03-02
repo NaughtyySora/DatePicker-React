@@ -1,0 +1,21 @@
+@import "./components/Calendar/Calendar.scss";
+@import "./components/CalendarDays/CalendarDays.scss";
+@import "./components/CalendarHead/CalendarHead.scss";
+@import "./components/CalendarNavigation/CalendarNavigation.scss";
+@import "./components/CalendarTimeTab/CalendarTimeTab.scss";
+
+.DatePicker {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  
+  & > * {
+    box-sizing: border-box;
+  }
+
+  & > button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+}

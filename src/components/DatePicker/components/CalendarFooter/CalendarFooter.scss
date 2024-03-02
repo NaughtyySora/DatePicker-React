@@ -1,0 +1,28 @@
+.CalendarFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--black_3);
+
+  &-btn {
+    outline: 1px solid var(--green_1);
+    color: var(--green_1);
+    padding: 0.2rem 0.75rem;
+    border-radius: 0.15rem;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      outline-width: 2px;
+    }
+
+    &:first-child {
+      outline-color: var(--orange_1);
+      color: var(--orange_1);
+      font-size: var(--fSize14);
+      font-weight: 500;
+    }
+  }
+}

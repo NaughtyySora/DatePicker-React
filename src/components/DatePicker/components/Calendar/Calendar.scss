@@ -1,0 +1,26 @@
+.Calendar {
+  --calendarWidth: 300px;
+  --position: calc(var(--calendarWidth) * -1);
+
+  position: absolute;
+  width: var(--calendarWidth);
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 15px 5px var(--gray_2);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 5;
+  top: 120%;
+  left: 0;
+  
+  &.active {
+    display: flex;
+  }
+
+  &.left {
+    top: 0;
+    left: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+}

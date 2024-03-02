@@ -1,0 +1,39 @@
+.CalendarDays {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: var(--calendarWidth);
+  padding: 0.25rem 0.5rem;
+
+  &-day {
+    flex-basis: 14.28%;
+    flex-basis: calc(100% / 7);
+    font-weight: 900;
+    font-size: var(--fSize16);
+    color: var(--white_1);
+    text-align: center;
+    cursor: pointer;
+    padding: 0.35rem 0;
+    border-radius: 0.15rem;
+
+    &:disabled {
+      pointer-events: none;
+      color: var(--gray_2);
+    }
+
+    &:hover,
+    &:focus {
+      outline: 1px solid var(--orange_1);
+    }
+
+    &.active {
+      background-color: var(--orange_1);
+
+      &:hover,
+      &:focus {
+        outline: 1px solid var(--white_1);
+      }
+    }
+  }
+}

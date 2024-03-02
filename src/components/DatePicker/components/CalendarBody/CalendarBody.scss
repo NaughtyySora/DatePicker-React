@@ -1,0 +1,55 @@
+.CalendarBody {
+  background-color: var(--black_3);
+  min-height: 230px;
+  position: relative;
+  
+  &-weeks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  &-week {
+    font-weight: 500;
+    font-size: var(--fSize14);
+    color: var(--gray_1);
+    width: 14.28%;
+    width: calc(100% / 7);
+    text-align: center;
+    cursor: default;
+  }
+
+  &-slider {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--calendarWidth) * 3);
+    transform: translateX(var(--position));
+    animation-direction: normal;
+    animation-duration: 0.3s;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+
+    &.right {
+      animation-name: slide;
+    }
+
+    &.left {
+      animation-name: slide;
+      animation-direction: reverse;
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(var(-position));
+    }
+
+    to {
+      transform: translateX(calc(var(--position) - var(--calendarWidth)));
+    }
+  }
+}
